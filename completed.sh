@@ -1,9 +1,7 @@
 #!/bin/bash
 echo " Script for generating work report"
-echo "Enna thudakiyallo :[y/n]"
 read c
 if (("$c"=="y")); then
-echo "Lets being Bro.."
 echo "Enter the date"
 read date
 touch /home/amal/Desktop/latest"$date".txt
@@ -18,7 +16,6 @@ echo "No of ticket attempted :"
 read num
 num=$((num-1))
 if (("$num"=="0")); then
-echo -e " Aahaa kollallo today ticket onum illa "
 break
 else
 echo -e "\n-----------\nTickets:\n-----------" >> /home/amal/Desktop/latest/"$date".txt
@@ -49,7 +46,6 @@ echo -e " Lets being with chat "
 echo "No of chat attempted :"
 read chat
 if (("$chat"=="0")); then
-echo -e "Aarum chatan vanilla"
 break
 else
 cat Metrics\ DimeNOC\ Administrator_chat.csv | cut -d '"' -f6 | tail -n +2 | cat >> /home/amal/Desktop/latest/tmp1
@@ -82,7 +78,7 @@ else
 exit
 fi
 else
-echo "Quiting........Good bye Bro"
+echo "Quiting........Good bye"
 fi
 
 

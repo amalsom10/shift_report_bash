@@ -1,9 +1,7 @@
 #!/bin/bash
 echo " Script for generating work report"
-echo "Enna thudakiyallo :[y/n]"
 read c
 if (("$c"=="y")); then
-echo "Lets being Bro.."
 echo "Enter the date"
 read date 
 touch /hdin/techies/hdinamalso/testsh/sh/"$date".txt
@@ -17,12 +15,10 @@ echo -e "Members in Shift : "$member"\n#######\n" >> /hdin/techies/hdinamalso/te
 echo "No of ticket attempted :"
 read n
 if (("$n"=="0")); then
-echo -e " Aahaa kollallo today ticket onum illa "
 break
 else
 echo -e "\n-----------\nTickets:\n-----------" >> /hdin/techies/hdinamalso/testsh/sh/"$date".txt
 if (("$n">="5")); then
-echo "Today killi poyi alla....."
 fi
 for ((i=1 ; i<="$n" ; i++)) 
 do
@@ -69,7 +65,7 @@ echo -e "-----------" >> /hdin/techies/hdinamalso/testsh/sh/"$date".txt
 done
 fi
 
-echo " Completed Bro......"
+echo " Completed"
 echo -e "Did you wish to open the report"
 read open
 if (("$open"=="y")); then
@@ -78,6 +74,6 @@ else
 exit
 fi
 else
-echo "Quiting........Good bye Bro"
+echo "Quiting....."
 fi
 
